@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hariprasad Thorve - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1 class="animate-text">Hariprasad Thorve</h1>
+    </header>
+
+
+    <section id="about">
+        <p class="about-text">I am a passionate engineering student, with interest in data science, AI and machine learning.</p>
+        <div class="profile-photo">
+            <img src="images/myImage.jpg" alt="Hariprasad Thorve" id="profile-img">
+        </div>
+    </section>
+
+    <section id="routine">
+        <h2>My Daily Routine</h2>
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+            </tr>
+            <tr>
+                <td>6:00 AM</td>
+                <td>Wake Up</td>
+            </tr>
+            <tr>
+                <td>7:00 AM</td>
+                <td>Study</td>
+            </tr>
+        </table>
+    </section>
+
+
+    <section id="media">
+        <h2>My Favourite Youtube Video</h2>
+
+        <div class="video-container">
+            <h3>Favourite YouTube Video</h3>
+            <div class="youtube-embed">
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/d72vXhJDE6M?si=VaP0-AB8jQHXmA63" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="audio-container">
+            <h3>Favorite Song</h3>
+            <audio controls>
+                <source src="audio/KAKA New Punjabi Song - Mitti De Tibbe (Official Video)  Afsha Khan  Latest Punjabi Songs 2022.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+
+        <div class="image-gallery">
+            <h3>Image Gallery</h3>
+            <div class="gallery-container">
+                <img src="images/image1.png" alt="Gallery Image 1">
+                <img src="images/image2.png" alt="Gallery Image 2">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="series">
+        <h2>Favorite Series</h2>
+        <a href="https://youtu.be/mCFXvDeUoi0?si=siwywO4FCZHMpqQL" target="_blank">
+            <img src="/images/reacher.jpg" alt="Series Poster" class="series-poster">
+        </a>
+    </section>
+
+
+    <section id="survey">
+        <h2>Survey Form</h2>
+        <form class="survey-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country">
+                    <option value="india">India</option>
+                    <option value="usa">USA</option>
+                    <option value="russia">Russia</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </section>
+
+ 
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Enter Name" required>
+            <input type="email" placeholder="Enter Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+
+    <section id="event">
+        <h2>Tech Conference 2023</h2>
+        <div class="event-container">
+            
+            <div class="event-content">
+                <h3>Welcome to the Tech Conference</h3>
+                <p>Join us for an exciting event featuring the latest in technology and innovation.</p>
+                
+                <h3>Schedule</h3>
+                <table class="event-schedule">
+                    <tr>
+                        <th>Time</th>
+                        <th>Event</th>
+                    </tr>
+                    <tr>
+                        <td>9:00 AM</td>
+                        <td>Keynote Speech</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 AM</td>
+                        <td>Workshop: AI and Machine Learning</td>
+                    </tr>
+                </table>
+
+                <h3>Speakers</h3>
+                <ul class="speakers-list">
+                    <li>John Doe - AI Expert</li>
+                    <li>Jane Smith - Web Development Guru</li>
+                </ul>
+
+                <h3>Register</h3>
+                <form class="event-register">
+                    <div class="form-group">
+                        <label for="event-name">Name:</label>
+                        <input type="text" id="event-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-email">Email:</label>
+                        <input type="email" id="event-email" required>
+                    </div>
+                    <button type="submit" class="register-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="https://harithorve.github.io/Portfolio/" class="portfolio-link">View Full Portfolio</a>
+    </footer>
+</body>
+</html> 

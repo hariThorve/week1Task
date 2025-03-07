@@ -1,0 +1,398 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #E0E0FF;
+    background: #040B2B;
+    background: linear-gradient(135deg, #040B2B 0%, #0A1959 100%);
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #0066FF, #00C6FF);
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 198, 255, 0.3);
+}
+
+/* Cool shine effect on header */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.1) 50%, transparent 55%);
+    animation: shine 3s infinite;
+}
+
+.animate-text {
+    animation: glow 2s ease-in-out infinite alternate;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 198, 255, 0.5);
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px rgba(0, 198, 255, 0.5); }
+    to { text-shadow: 0 0 20px rgba(0, 198, 255, 0.8), 0 0 30px rgba(0, 198, 255, 0.6); }
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+
+section {
+    padding: 2.5rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 198, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+
+.about-text {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: #B8B8FF;
+}
+
+.profile-photo {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #0066FF;
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.3);
+}
+
+#profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover #profile-img {
+    transform: scale(1.1);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 1.5rem 0;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+th, td {
+    padding: 1.2rem;
+    border: 1px solid rgba(0, 198, 255, 0.2);
+    text-align: left;
+}
+
+th {
+    background: #0066FF;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Media Section */
+.video-container, .audio-container {
+    margin: 2.5rem 0;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.03);
+    border-color: #0066FF;
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.3);
+}
+
+
+.survey-form, .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 198, 255, 0.2);
+    border-radius: 8px;
+    color: #E0E0FF;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #0066FF;
+    box-shadow: 0 0 10px rgba(0, 198, 255, 0.3);
+}
+
+button {
+    background: linear-gradient(135deg, #0066FF, #00C6FF);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #00C6FF, #0066FF);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 198, 255, 0.4);
+}
+
+
+.event-container {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 198, 255, 0.2);
+}
+
+.event-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.event-nav a {
+    color: #E0E0FF;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(0, 198, 255, 0.1);
+}
+
+.event-nav a:hover {
+    background: rgba(0, 198, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.02);
+    margin-top: 4rem;
+    
+}
+
+.portfolio-link {
+    color: #E0E0FF;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 2px solid #0066FF;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.portfolio-link:hover {
+    background: #0066FF;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.3);
+}
+
+
+h2 {
+    color: #00C6FF;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h3 {
+    color: #0066FF;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+
+@media (max-width: 768px) {
+    section {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .event-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .animate-text {
+        font-size: 2rem;
+    }
+
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+.event-content {
+    padding: 2rem 0;
+}
+
+.event-content h3 {
+    margin-top: 2rem;
+    color: #00C6FF;
+    font-size: 1.8rem;
+}
+
+.event-content p {
+    color: #E0E0FF;
+    margin-bottom: 2rem;
+}
+
+.event-schedule {
+    width: 100%;
+    margin: 1rem 0 2rem 0;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.event-schedule th,
+.event-schedule td {
+    padding: 1rem;
+    border: 1px solid rgba(0, 198, 255, 0.2);
+}
+
+.event-schedule th {
+    background: #0066FF;
+    color: white;
+}
+
+.event-schedule td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.speakers-list {
+    list-style: none;
+    margin: 1rem 0 2rem 0;
+}
+
+.speakers-list li {
+    padding: 0.5rem 0;
+    color: #E0E0FF;
+}
+
+.event-register {
+    max-width: 500px;
+    margin: 1rem 0;
+}
+
+.event-register .form-group {
+    margin-bottom: 1rem;
+}
+
+.event-register label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #E0E0FF;
+}
+
+.event-register input {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 198, 255, 0.2);
+    border-radius: 8px;
+    color: #E0E0FF;
+}
+
+.register-btn {
+    margin-top: 1rem;
+}
+
+.event-nav {
+    background: rgba(0, 198, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.event-nav a {
+    font-weight: 500;
+}
+
+
+.event-content::after {
+    content: '© 2023 Tech Conference';
+    display: block;
+    text-align: left;
+    margin-top: 2rem;
+    color: #E0E0FF;
+    opacity: 0.7;
+    font-size: 0.9rem;
+} 
